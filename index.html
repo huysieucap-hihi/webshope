@@ -60,16 +60,13 @@
         status.style.color = "#ff9800";
 
         try {
-          const response = await fetch(
-            "https://webshopee-new.onrender.com/api/gan-ma",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ link }),
+          const response = await fetch("api/gan-ma", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
             },
-          );
+            body: JSON.stringify({ link }),
+          });
 
           const result = await response.json();
 
